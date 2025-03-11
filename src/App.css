@@ -1,0 +1,99 @@
+:root {
+  --primary-color: #4a6cf7;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --light-bg: #f8f9fa;
+  --dark-bg: #121212;
+  --light-text: #212529;
+  --dark-text: #f8f9fa;
+  --light-border: #dee2e6;
+  --dark-border: #444;
+  --light-card-bg: #ffffff;
+  --dark-card-bg: #1e1e1e;
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+  background-color: var(--light-bg);
+  color: var(--light-text);
+  transition: var(--transition);
+}
+
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input, textarea, select {
+  padding: 0.5rem;
+  border: 1px solid var(--light-border);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: var(--dark-card-bg);
+  color: var(--dark-text);
+  border-color: var(--dark-border);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.dark a {
+  color: #7b9aff;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+} 

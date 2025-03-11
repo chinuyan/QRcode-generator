@@ -1,0 +1,168 @@
+.batch-generator-page {
+  padding-bottom: 2rem;
+}
+
+.batch-generator-page h1 {
+  margin-bottom: 2rem;
+}
+
+.batch-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.input-section,
+.qr-preview-batch {
+  background-color: var(--light-card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.batch-generator-page.dark .input-section,
+.batch-generator-page.dark .qr-preview-batch {
+  background-color: var(--dark-card-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.csv-import {
+  margin-bottom: 1.5rem;
+}
+
+.csv-import h3 {
+  margin-bottom: 1rem;
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin-top: 0.5rem;
+}
+
+.batch-generator-page.dark .hint {
+  color: #aaa;
+}
+
+.batch-input {
+  width: 100%;
+  height: 150px;
+  resize: vertical;
+  margin-bottom: 1.5rem;
+}
+
+.batch-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option-group label {
+  font-weight: 500;
+}
+
+.generate-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem;
+  font-weight: 500;
+}
+
+.qr-preview-batch h3 {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.download-all-button {
+  background-color: var(--success-color);
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.qr-codes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.qr-code-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--light-bg);
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.batch-generator-page.dark .qr-code-item {
+  background-color: var(--dark-bg);
+}
+
+.qr-code-info {
+  margin-top: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.qr-code-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.qr-code-value {
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  word-break: break-all;
+  display: block;
+  max-height: 2.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.batch-generator-page.dark .qr-code-value {
+  color: #aaa;
+}
+
+.empty-batch {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--secondary-color);
+}
+
+.batch-generator-page.dark .empty-batch {
+  color: #aaa;
+}
+
+@media (max-width: 992px) {
+  .batch-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .qr-preview-batch {
+    order: -1;
+  }
+}
+
+@media (max-width: 576px) {
+  .qr-codes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} 

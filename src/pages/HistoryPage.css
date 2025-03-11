@@ -1,0 +1,99 @@
+.history-page {
+  padding-bottom: 2rem;
+}
+
+.history-page h1 {
+  margin-bottom: 2rem;
+}
+
+.history-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.clear-history {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.history-item {
+  background-color: var(--light-card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.history-page.dark .history-item {
+  background-color: var(--dark-card-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.history-item-info {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.history-item-value {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  word-break: break-all;
+  font-size: 0.9rem;
+  max-height: 3.6rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.history-item-date {
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+}
+
+.history-page.dark .history-item-date {
+  color: #aaa;
+}
+
+.history-item-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.history-item-actions button {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+}
+
+.empty-history {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--light-card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.history-page.dark .empty-history {
+  background-color: var(--dark-card-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+} 
